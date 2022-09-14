@@ -100,6 +100,7 @@ const closeModal = () => {
 };
 
 const start = () => {
+  console.log("buttone click")
   // If already started, do not start again
   if (startTime) return;
 
@@ -124,7 +125,7 @@ const start = () => {
 };
 
 // START Countdown
-startBtn.addEventListener("click", start());
+startBtn.addEventListener("click", start);
 
 // If history exists, show it
 displayHistory();

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <title>Speed Monster</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        /* background-color: #333; */
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        background-color: rgb(17, 17, 17);
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .cards {
+        width: 100%;
+        height: 100%;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 30px;
+        color: white;
+        border-radius: 15px;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(
+          92.49deg,
+          rgba(255, 255, 255, 0.1) 0.18%,
+          rgba(255, 255, 255, 0.05) 99.85%
+        );
+        backdrop-filter: blur(5px);
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a class="active" href="#contact">Blog</a></li>
+          <li><a href="#news">News</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="main">
+        <div class="cards">
+          <h3>
+            <span class="bold red">Question 1.</span> localstorage
+            sessionstorage difference.
+          </h3>
+          <p>
+            <span class="bold">Ans : </span>
+            The read-only sessionStorage property accesses a session Storage
+            object for the current origin. sessionStorage is similar to
+            localStorage; the difference is that while data in localStorage
+            doesn't expire, data in sessionStorage is cleared when the page
+            session ends.
+          </p>
+          <p>You made mistakes</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

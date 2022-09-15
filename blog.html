@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
     <style>
-      ul {
+      .nav {
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -22,11 +22,11 @@
         /* background-color: #333; */
       }
 
-      li {
+      .nav li {
         float: left;
       }
 
-      li a {
+      .nav li a {
         display: block;
         color: white;
         text-align: center;
@@ -34,17 +34,19 @@
         text-decoration: none;
       }
 
-      li a:hover {
-        background-color: rgb(17, 17, 17);
+      .nav li a:hover {
+        background-color: rgb(104, 159, 91);
       }
-      .main {
+      #main {
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         margin-top: 20px;
       }
       .cards {
-        width: 100%;
-        height: 100%;
+        width: 75%;
+        height: 50%;
         padding: 50px;
         display: flex;
         flex-direction: column;
@@ -61,12 +63,16 @@
         backdrop-filter: blur(5px);
         margin-bottom: 30px;
       }
+      hr {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
     </style>
   </head>
   <body>
     <header>
       <nav>
-        <ul>
+        <ul class="nav">
           <li><a href="#home">Home</a></li>
           <li><a class="active" href="#contact">Blog</a></li>
           <li><a href="#news">News</a></li>
@@ -87,6 +93,72 @@
             localStorage; the difference is that while data in localStorage
             doesn't expire, data in sessionStorage is cleared when the page
             session ends.
+          </p>
+        </div>
+        <div class="cards">
+          <h3>
+            <span class="bold red">Question 2.</span> Global scope and block
+            scope difference .
+          </h3>
+          <p>
+            <span class="bold">Ans : </span>
+            The scope is the current context of execution in which values and
+            expressions are "visible" or can be referenced. If a variable or
+            expression is not in the current scope, it will not be available for
+            use. Scopes can also be layered in a hierarchy, so that child scopes
+            have access to parent scopes, but not vice versa.
+          </p>
+          <hr />
+          <p>JavaScript has the following kinds of scopes:</p>
+          <ul>
+            <li>
+              Global scope: The default scope for all code running in script
+              mode.
+            </li>
+            <li>Module scope: The scope for code running in module mode.</li>
+            <li>Function scope: The scope created with a function.</li>
+          </ul>
+          <p>
+            In addition, variables declared with let or const can belong to an
+            additional scope:
+          </p>
+          <ul>
+            <li>
+              Block scope: The scope created with a pair of curly braces (a
+              block).
+            </li>
+          </ul>
+        </div>
+        <div class="cards">
+          <h3>
+            <span class="bold red">Question 3.</span> How to work event loop in
+            javascript ?
+          </h3>
+          <p>
+            <span class="bold">Ans : </span>
+            The Event Loop has one simple job — to monitor the Call Stack and
+            the Callback Queue. If the Call Stack is empty, the Event Loop will
+            take the first event from the queue and will push it to the Call
+            Stack, which effectively runs it. Such an iteration is called a tick
+            in the Event Loop. Each event is just a function callback.
+          </p>
+        </div>
+        <div class="cards">
+          <h3>
+            <span class="bold red">Question 4.</span> How many ways can it be
+            found undefined in javascript ?
+          </h3>
+          <p>
+            <span class="bold">Ans : </span>
+            undefined is a property of the global object. That is, it is a
+            variable in global scope. The initial value of undefined is the
+            primitive value undefined. In all non-legacy browsers, undefined is
+            a non-configurable, non-writable property. (Even when this is not
+            the case, avoid overriding it.) A variable that has not been
+            assigned a value is of type undefined. A method or statement also
+            returns undefined if the variable that is being evaluated does not
+            have an assigned value. A function returns undefined if a value was
+            not returned.
           </p>
         </div>
       </div>

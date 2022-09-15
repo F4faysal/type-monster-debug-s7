@@ -143,8 +143,9 @@ button {
 }
 
 #histories {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid: auto-flow / 1fr 1fr 1fr;
+  gap: 10px;
   justify-content: space-around;
 }
 
@@ -153,6 +154,7 @@ button {
   height: 100%;
   padding: 50px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
@@ -183,11 +185,33 @@ button {
 }
 
 @media only screen and (max-width: 700px) {
+  #display {
+    text-overflow: clip;
+    overflow: hidden;
+
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+  }
+  #question {
+    font-size: 17px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
   .box-container {
     padding: 0 20px;
     width: 100%;
   }
+  #histories {
+    display: flex;
+    flex-direction: column;
+  }
   .card {
     flex-direction: column;
+    font-size: 13px;
+    padding: 10px;
+  }
+  .card p {
+    font-size: 12px;
   }
 }
